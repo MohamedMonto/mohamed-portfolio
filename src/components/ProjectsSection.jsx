@@ -1,4 +1,6 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 const projects = [
   {
@@ -9,6 +11,7 @@ const projects = [
     tags: ["React", "TailwindCSS", "Supabase"],
     demoUrl: "#",
     githubUrl: "#",
+    category: "React"
   },
   {
     id: 2,
@@ -19,6 +22,7 @@ const projects = [
     tags: ["TypeScript", "D3.js", "Next.js"],
     demoUrl: "#",
     githubUrl: "#",
+    category: "React"
   },
   {
     id: 3,
@@ -29,10 +33,19 @@ const projects = [
     tags: ["React", "Node.js", "Stripe"],
     demoUrl: "#",
     githubUrl: "#",
+    category: "HTML & CSS"
   },
 ];
 
+const categories = ["all", "React", "HTML & CSS"];
+
 export const ProjectsSection = () => {
+  const [activeCategory, setActiveCategory] = useState("all");
+  
+  const filteredProjects = projects.filter(
+    (project) => activeCategory === "all" || project.category === activeCategory
+  );
+
   return (
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
@@ -46,8 +59,25 @@ export const ProjectsSection = () => {
           crafted with attention to detail, performance, and user experience.
         </p>
 
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category, key) => (
+            <button
+              key={key}
+              onClick={() => setActiveCategory(category)}
+              className={cn(
+                "px-5 py-2 rounded-full cursor-pointer transition-colors duration-300 capitalize",
+                activeCategory === category
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-secondary/70 text-forefround hover:bd-secondary"
+              )}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, key) => (
+          {filteredProjects.map((project, key) => (
             <div
               key={key}
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
@@ -62,8 +92,8 @@ export const ProjectsSection = () => {
 
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                  {project.tags.map((tag, index) => (
+                    <span key={index} className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
                       {tag}
                     </span>
                   ))}
