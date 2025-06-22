@@ -3,38 +3,93 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const projects = [
-  {
+   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "#",
-    githubUrl: "#",
+    title: "Mohamed Portfolio",
+    description: "A beautiful Portfolio page app using HTML&CSS and React , tailwind.",
+    image: "/projects/mp.png",
+    tags: ["Html", "React", "Css","tailwind"],
+    demoUrl: "https://mohamedmontaser.vercel.app/",
+    githubUrl: "https://github.com/MohamedMonto/Portfolio",
     category: "React"
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
-    description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
-    demoUrl: "#",
-    githubUrl: "#",
-    category: "React"
+    title: "Barbar-Shop-Website-Design",
+    description: "A beautiful landing page app using HTML&CSS and bootstrap.",
+    image: "/projects/project1.png",
+    tags: ["Html", "Bootstrap", "Css"],
+    demoUrl: "https://barbar-shop-website-design-eight.vercel.app/",
+    githubUrl: "https://github.com/MohamedMonto/Barbar-Shop-Website-Design",
+    category: "HTML & CSS"
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Daniels  Portfolio ",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "A beautiful Portfolio landing page app using HTML&CSS and bootstrap.",
+    image: "/projects/project2.png",
+    tags: ["Html", "Bootstrap", "Css"],
+    demoUrl: "https://daniels-kappa.vercel.app/",
+    githubUrl: "https://github.com/MohamedMonto/Daniels",
     category: "HTML & CSS"
   },
+  {
+    id: 4,
+    title: "Healthy Food",
+    description:
+      "ed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.",
+    image: "/projects/project3.png",
+    tags: ["Html", "Bootstrap", "Css"],
+    demoUrl: "https://mealify-zeta.vercel.app/",
+    githubUrl: "https://github.com/MohamedMonto/Mealify",
+    category: "HTML & CSS"
+  },
+    {
+    id: 5,
+    title: "Bulid-Con",
+    description:
+      "Your Dream House We Provide Best Quality Services Ever",
+    image: "/projects/project4.png",
+    tags: ["Html", "Bootstrap", "Css"],
+    demoUrl: "https://bulid-con.vercel.app/",
+    githubUrl: "https://github.com/MohamedMonto/BulidCon",
+    category: "HTML & CSS"
+  },
+    {
+    id: 6,
+    title: "DevFolio Portfolio ",
+    description:
+      "A beautiful Portfolio landing page app using HTML&CSS and bootstrap.",
+    image: "/projects/project5.png",
+    tags: ["Html", "Bootstrap", "Css"],
+    demoUrl: "https://dev-folio-plum.vercel.app/",
+    githubUrl: "https://github.com/MohamedMonto/DevFolio",
+    category: "HTML & CSS"
+  },
+    {
+    id: 7,
+    title: "Mohamed Portfolio",
+    description:
+      "A beautiful Portfolio landing page app using HTML&CSS and bootstrap.",
+    image: "/projects/project6.png",
+    tags: ["Html", "Bootstrap", "Css"],
+    demoUrl: "https://fokir-sigma.vercel.app/",
+    githubUrl: "https://github.com/MohamedMonto/Fokir",
+    category: "HTML & CSS"
+  },
+    {
+    id: 8,
+    title: "Bookmarker",
+    description:
+      "Full-featured Bookmark your favorite sites  with user authentication and payment processing.",
+    image: "/projects/project7.png",
+    tags: ["React", "Html", "Css"],
+    demoUrl: "https://bookmarker-dusky.vercel.app/",
+    githubUrl: "https://github.com/MohamedMonto/Bookmarker",
+    category: "React"
+  },
+
 ];
 
 const categories = ["all", "React", "HTML & CSS"];
@@ -130,7 +185,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/machadop1407"
+            href="https://github.com/MohamedMonto"
           >
             Check My Github <ArrowRight size={16} />
           </a>

@@ -1,4 +1,5 @@
 import {
+  Facebook,
   Instagram,
   Linkedin,
   Mail,
@@ -79,7 +80,7 @@ export const ContactSection = () => {
                     href="mailto:hello@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    hello@gmail.com
+                    mohamedmontaseryousef@gmail.com
                   </a>
                 </div>
               </div>
@@ -93,7 +94,7 @@ export const ContactSection = () => {
                     href="tel:+11234567890"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +1 (123) 456-7890
+                    +20 (114) 948-7959
                   </a>
                 </div>
               </div>
@@ -104,7 +105,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium"> Location</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Vancouver, BC, Canada
+                    Nasr City, Cairo
                   </a>
                 </div>
               </div>
@@ -113,18 +114,15 @@ export const ContactSection = () => {
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="#" target="_blank">
+                <a href="https://www.linkedin.com/in/mohamedmontaseryousef?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
                   <Linkedin />
                 </a>
-                <a href="#" target="_blank">
-                  <Twitter />
+                <a href="https://www.facebook.com/share/1HrwoeVyX7/" target="_blank">
+                  <Facebook />
                 </a>
-                <a href="#" target="_blank">
-                  <Instagram />
-                </a>
-                <a href="#" target="_blank">
-                  <Twitch />
-                </a>
+               >
+             
+              
               </div>
             </div>
           </div>
@@ -165,7 +163,7 @@ export const ContactSection = () => {
                   name="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="john@gmail.com"
+                  placeholder="mohamedmontaseryousef@gmail.com"
                 />
               </div>
 
