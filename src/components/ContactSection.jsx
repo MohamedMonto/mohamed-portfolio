@@ -120,8 +120,7 @@ export const ContactSection = () => {
                 <a href="https://www.facebook.com/share/1HrwoeVyX7/" target="_blank">
                   <Facebook />
                 </a>
-               >
-             
+              
               
               </div>
             </div>
